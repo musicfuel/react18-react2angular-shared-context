@@ -1,6 +1,5 @@
-import React, {ComponentProps, ComponentType, Fragment, FunctionComponent, useEffect, useLayoutEffect, useRef, useState} from 'react';
+import React, {ComponentProps, ComponentType, Fragment, FunctionComponent, useEffect, useLayoutEffect, useRef, useState, useId} from 'react';
 import {createPortal} from 'react-dom';
-import {v4 as uuid} from 'uuid';
 
 interface IComponent {
   key: string;
@@ -74,7 +73,7 @@ const createSharedContext = (Root: ComponentType<any> = Fragment, isAsync = true
     // Create as local variable instead of returning inline to fix TSLint
     const UseSharedContext: FunctionComponent<ComponentProps<typeof component>> = props => {
       // Create unique key for this instance
-      const key = useRef(uuid());
+      const key = useRef(useId());
       // Hold reference to rendered hidden DOM node
       const ref = useRef<HTMLDivElement>(null);
       // Instance is SharedContext

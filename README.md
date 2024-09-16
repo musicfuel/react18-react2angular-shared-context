@@ -1,13 +1,14 @@
 # react2angular-shared-context
 
 > Share context between React components in react2angular.
+> <b>This version can be used with React 18</b>
 
-[![NPM](https://img.shields.io/npm/v/react2angular-shared-context.svg)](https://www.npmjs.com/package/react2angular-shared-context) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react18-react2angular-shared-context.svg)](https://www.npmjs.com/package/react18-react2angular-shared-context) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save react2angular-shared-context
+npm install --save react18-react2angular-shared-context
 ```
 
 ## Usage
@@ -17,7 +18,7 @@ import { react2angular } from 'react2angular';
 import React, { FunctionComponent } from 'react'
 import { ProviderAbc, ConsumerAbc } from './context/abc'
 
-import createSharedContext from 'react2angular-shared-context'
+import createSharedContext from 'react18-react2angular-shared-context'
 
 // Root component with context providers
 const Root: FunctionComponent<{foo: number}> = ({foo, children}) => (
@@ -51,4 +52,4 @@ angular
 
 ## License
 
-MIT © [https://github.com/seahorsepip](https://github.com/seahorsepip)
+MIT © [https://github.com/musicfuel](https://github.com/musicfuel)
